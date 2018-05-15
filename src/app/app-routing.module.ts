@@ -1,7 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthComponent } from './auth/auth.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', redirectTo: 'auth', pathMatch: 'full' },
+  { path: 'auth', component: AuthComponent },
+  // { path: 'user', component: UserComponent,  resolve: { data: UserResolver}}
+];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
